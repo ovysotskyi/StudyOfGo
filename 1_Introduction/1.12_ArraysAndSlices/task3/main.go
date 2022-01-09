@@ -11,17 +11,11 @@ func main()  {
     // здесь ваш код
 	var aMax int
 	for _, value := range array {
-		if value < 0 {
-			if -value > aMax {
-				aMax = value
-			}
-		} else {
-			if value > aMax {
-				aMax = value
-			}
+		if value > aMax {
+			aMax = value
+		} else if aMax == 0 && value < 0 {
+			aMax = value
 		}
-
-		
 	}
 
 	fmt.Print(aMax)
