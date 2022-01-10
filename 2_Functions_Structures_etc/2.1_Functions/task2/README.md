@@ -16,5 +16,5 @@
 ## Sample Output:
 
 ```bash
-  801272
+  
 ```
