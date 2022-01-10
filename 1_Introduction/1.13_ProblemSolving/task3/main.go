@@ -3,13 +3,13 @@ package main
 import "fmt"
 
 func main() {
-	var number, newNumber int 
-	fmt.Scan(&number)
+	var seconds, hours, minutes int
+	fmt.Scan(&seconds)
 
-	for i := 0; i < 3; i++ {
-		newNumber = newNumber * 10 + number % 10
-		number = number / 10
+	if seconds > 0 && seconds < 86399 {
+		hours = seconds / 3600
+		minutes = (seconds - (hours * 3600)) / 60
+
+		fmt.Printf("It is %d hours %d minutes.", hours, minutes)
 	}
-
-	fmt.Print(newNumber)
 }

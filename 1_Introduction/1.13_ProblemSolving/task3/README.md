@@ -14,11 +14,11 @@ It is ... hours ... minutes.
 
 ## Sample Input:
 ```bash
-  843
+  13257
 ```
 
 ## Sample Output:
 
 ```bash
-  348
+  It is 3 hours 40 minutes.
 ```
