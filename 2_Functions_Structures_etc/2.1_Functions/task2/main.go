@@ -3,29 +3,20 @@ package main
 import "fmt"
 
 func main() {
-	var number, numRem, digit, newNumber int64
-	// var digit int
-	fmt.Scan(&number, &digit)
+	fmt.Print(minimumFromFour())
+}
 
-	for {
-		numRem = number % 10
-		if numRem != digit {
-			newNumber = (newNumber * 10) + numRem
-		}
+func minimumFromFour() int {
+	var number, nMin int
 
-		number = number / 10
-		if number == 0 {
-			break
-		}
-	}
+	for i := 0; i < 4; i++ {
 
-	for {
-		numRem := newNumber % 10
-		fmt.Printf("%d", numRem)
+		fmt.Scan(&number)
 
-		newNumber = newNumber / 10
-		if newNumber == 0 {
-			break
+		if nMin == 0 || nMin > number {
+			nMin = number
 		}
 	}
+
+	return nMin
 }
