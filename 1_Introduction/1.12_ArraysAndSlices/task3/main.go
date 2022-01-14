@@ -11,8 +11,8 @@ func main() {
 	}
 	// здесь ваш код
 	var aMax int
-	for _, value := range array {
-		if value > aMax || (aMax == 0 && value < 0) {
+	for index, value := range array {
+		if value > aMax || (index == 0 && value < 0) {
 			aMax = value
 		}
 	}
