@@ -10,9 +10,9 @@ func main() {
 		array[i] = a
 	}
 	// здесь ваш код
-	var aMax int
-	for index, value := range array {
-		if value > aMax || index == 0 {
+	aMax := array[0]
+	for _, value := range array {
+		if value > aMax {
 			aMax = value
 		}
 	}
