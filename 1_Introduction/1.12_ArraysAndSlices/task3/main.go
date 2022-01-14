@@ -12,7 +12,7 @@ func main() {
 	// здесь ваш код
 	var aMax int
 	for index, value := range array {
-		if value > aMax || (index == 0 && value < 0) {
+		if value > aMax || index == 0 {
 			aMax = value
 		}
 	}
