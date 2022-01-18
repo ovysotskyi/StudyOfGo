@@ -3,21 +3,17 @@ package main
 import "fmt"
 
 func main() {
-	var a, b, number, count int
+	var a, b int
 	fmt.Scan(&a, &b)
 
 	if a <= b {
-		for i := a; i <= b; i++ {
+		for i := b; i >= a; i-- {
 			if i%7 == 0 {
-				number = i
-				count++
+				fmt.Print(i)
+				break
+			} else if i == a {
+				fmt.Print("NO")
 			}
-		}
-
-		if count > 0 || (a == 0 && b == 0) {
-			fmt.Print(number)
-		} else {
-			fmt.Print("NO")
 		}
 	}
 }
